@@ -8,11 +8,7 @@ class Quiz extends Component {
         this.state = {quiz_position: 1};
     }
 
-    state={
-    }
-
     render(){
-        console.log("Quiz.render()", quizData);
         return (
             <div>
                 <div className="QuizQuestion">
