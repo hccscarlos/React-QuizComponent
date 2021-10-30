@@ -16,19 +16,22 @@ class Quiz extends Component {
         console.log("render()", {isQuizEnd, quiz_position:this.state.quiz_position, quiz_questions:quizData.quiz_questions.length});
         return (
             <main>
-                <section>
-                <p>{quizData.quiz_questions[0].instruction_text}</p>
-                </section>
                 {isQuizEnd ?
                 <QuizEnd></QuizEnd>
                 :
+                <React.Fragment>
+                <section>
+                <p>{quizData.quiz_questions[0].instruction_text}</p>
+                </section>
                 <section className="buttons">
                 <ul>
                     <QuizQuestion 
                         quiz_question={quizData.quiz_questions[this.state.quiz_position-1]}
                     />
                 </ul>
-                </section>}
+                </section>
+                </React.Fragment>
+                }
             </main>
         )
     }
