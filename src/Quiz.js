@@ -10,7 +10,6 @@ class Quiz extends Component {
     }
 
     render(){
-        // console.log("Quiz.render()", quizData.quiz_questions[this.state.quiz_position-1]);
         return (
             <QuizQuestion 
                 quiz_question={quizData.quiz_questions[this.state.quiz_position-1]}

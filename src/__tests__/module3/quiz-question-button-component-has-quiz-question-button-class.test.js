@@ -11,6 +11,7 @@ describe('QuizQuestionButton Component', () => {
   it('has a QuizQuestionButton class that extends Component @quiz-question-button-component-has-quiz-question-button-class', () => {
     let file;
     try {
+      console.log("describe()", fs.readFileSync(__dirname + '/../../QuizQuestionButton.js').toString())
       file = fs.readFileSync(__dirname + '/../../QuizQuestionButton.js').toString();
     } catch (e) {
       assert(false, "The QuizQuestionButton.js file hasn't been created yet.")
