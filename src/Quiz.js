@@ -13,7 +13,7 @@ class Quiz extends Component {
     render(){
         // const isQuizEnd = (this.state.quiz_position === quizData.quiz_questions.length);
         const isQuizEnd = true;
-        console.log("render()", {isQuizEnd, quiz_position:this.state.quiz_position, quiz_questions:quizData.quiz_questions.length});
+        console.log("Quiz.render()", {isQuizEnd, quiz_position:this.state.quiz_position, quiz_questions:quizData.quiz_questions.length});
         return (
             <main>
                 {isQuizEnd ?
