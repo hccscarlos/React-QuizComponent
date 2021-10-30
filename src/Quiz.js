@@ -19,18 +19,9 @@ class Quiz extends Component {
                 {isQuizEnd ?
                 <QuizEnd></QuizEnd>
                 :
-                <React.Fragment>
-                <section>
-                <p>{quizData.quiz_questions[0].instruction_text}</p>
-                </section>
-                <section className="buttons">
-                <ul>
-                    <QuizQuestion 
-                        quiz_question={quizData.quiz_questions[this.state.quiz_position-1]}
-                    />
-                </ul>
-                </section>
-                </React.Fragment>
+                <QuizQuestion 
+                    quiz_question={quizData.quiz_questions[this.state.quiz_position-1]}
+                />  
                 }
             </main>
         )
